@@ -1,10 +1,7 @@
-const numbers = [3, 17, 2, 8, 25, 10];
+const arr = [1, 2, 3, 4, 5];
+const newArr = [];
 
-let max = numbers[0];
-
-for (let i = 1; i < numbers.length; i++){
-    if (numbers[i] > max) {
-        max =+ numbers[i]
-    }
+for (let i = arr.length -1; i >= 0; i--){
+    newArr.push(arr[i]);
 }
-console.log("최댓값:", max)
+console.log(newArr);
