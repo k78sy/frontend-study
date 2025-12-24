@@ -1,0 +1,14 @@
+body{background: rgb(228, 95, 95);}
+
+h1 {
+    color:bisque;
+    transition: color .4s;
+}
+
+.clicked{
+    color:blueviolet;
+}
+
+.t_transform{
+    text-transform: uppercase;
+}

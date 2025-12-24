@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Challenge</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+      body {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .box {
+        font-family: serif;
+        font-size: 10vw;
+        letter-spacing: -4px;
+        font-weight: 900;
+        color: #f54719;
+        display: flex;
+        justify-content: center;
+      }
+      .box span {
+        align-self: center;
+      }
+
+      .box:first-child {
+        background-color: #dae7ed;
+      }
+
+      .box:nth-of-type(2) {
+        background-color: #018a69;
+      }
+
+      .box:nth-of-type(3) {
+        background-color: #f54719;
+        color: #fff;
+      }
+
+      .box:nth-of-type(4) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 5vw;
+      }
+
+      .box-small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box-small:nth-of-type(1) {
+        background-color: #f6acc5;
+      }
+
+      .box-small:nth-of-type(2) {
+        background-color: #605faa;
+      }
+
+      .box-small:nth-of-type(3) {
+        background-color: #ffc22b;
+      }
+
+      .box-small:nth-of-type(4) {
+        background-color: #f97275;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span>Ostrich</span>
+    </div>
+    <div class="box">
+      <span>Ostrich</span>
+    </div>
+    <div class="box">
+      <span>Ostrich</span>
+    </div>
+    <div class="box">
+      <div class="box-small">
+        <span>Ostrich</span>
+      </div>
+      <div class="box-small">
+        <span>Ostrich</span>
+      </div>
+      <div class="box-small">
+        <span>Ostrich</span>
+      </div>
+      <div class="box-small">
+        <span>Ostrich</span>
+      </div>
+    </div>
+  </body>
+</html>

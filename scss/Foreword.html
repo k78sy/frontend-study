@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Challenge</title>
+    <style>
+      @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+      body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
+        grid-template-rows: 8vw 1fr 1fr;
+        height: 100vh;
+        box-sizing: border-box;
+        grid-auto-rows: 1;
+      }
+      .header {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        font-weight: 500;
+      }
+      .box .text {
+        box-sizing: border-box;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+      }
+      .box .text h2 {
+        font-weight: 500;
+        font-size: 1.6rem;
+      }
+      .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .box:nth-of-type(1) {
+        background-color: #b7b59d;
+      }
+      .box:nth-of-type(3) {
+        background-color: #fe3e15;
+      }
+      .box:nth-of-type(5) {
+        background-color: #79738b;
+      }
+      .box:nth-of-type(6) {
+        background-color: #caff66;
+      }
+      .box:nth-of-type(7) {
+        background-color: #8e2d2d;
+      }
+      .box:nth-of-type(8) {
+        background-color: #32a0f9;
+      }
+      .box:nth-of-type(10) {
+        background-color: #39856f;
+      }
+      .box:nth-of-type(12) {
+        background-color: #dfbce1;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Foreword, Contributors</h1>
+    </header>
+    <div class="box">
+      <div class="text">
+        <h2>Tools for Slowing Down</h2>
+        <span>Chloe Geoghegan & Chloe Reith</span>
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://picsum.photos/250/300" alt="random image" />
+    </div>
+    <div class="box">
+      <div class="text">
+        <h2>The (Old) New Spirit of Curating and Myths od Nomadism</h2>
+        <span>Tim Gentles</span>
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://picsum.photos/250/301" alt="random image" />
+    </div>
+    <div class="box">
+      <div class="text">
+        <h2>Pressing Singularities</h2>
+        <span>Tendai John Mutambu & Robyn Maree Pickens</span>
+      </div>
+    </div>
+    <div class="box">
+      <div class="text">
+        <h2>We're in This Together</h2>
+        <span>Vera Mey</span>
+      </div>
+    </div>
+    <div class="box">
+      <div class="text">
+        <h2>
+          The Curatorial as a Liveable Suject Position: Hospitality and
+          Differential Consciousness
+        </h2>
+        <span>Danny Butt</span>
+      </div>
+    </div>
+    <div class="box">
+      <div class="text">
+        <h2>Community, Cmmunity Art, Community Art in Howick</h2>
+        <span>Balamohan Shingade</span>
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://picsum.photos/250/302" alt="random image" />
+    </div>
+    <div class="box">
+      <div class="text">
+        <h2>Feeling Welcon?</h2>
+        <span>Louisa Afoa & Loana Gordon-Smith</span>
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://picsum.photos/250/305" alt="random image" />
+    </div>
+    <div class="box">
+      <div class="text">
+        <h2>on Friendship</h2>
+        <span>Rebecca Boswell</span>
+      </div>
+    </div>
+  </body>
+</html>

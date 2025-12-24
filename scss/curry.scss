@@ -1,0 +1,204 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+$orange: #fd6b3a;
+$borderWidth: 5px;
+
+@keyframes slide-top {
+  0% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateX(25%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 55px 1fr 55px;
+  grid-template-rows: 55px 1fr 55px;
+  padding: 15px;
+  background-color: #efe753;
+}
+.bar {
+  text-transform: uppercase;
+  font-style: italic;
+  position: relative;
+  overflow: hidden;
+  & > span {
+    font-weight: bold;
+    width: max-content;
+  }
+  &:nth-of-type(1),
+  &:nth-of-type(4) {
+    grid-column: span 3;
+    background-color: #fff;
+    color: $orange;
+    border: $borderWidth solid $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+  }
+  &:nth-of-type(1) {
+    span {
+      position: absolute;
+      animation: slide-top 25s linear infinite;
+    }
+  }
+  &:nth-of-type(4) {
+    span {
+      position: absolute;
+      animation: slide-bottom 25s linear infinite;
+    }
+  }
+  &:nth-of-type(2) {
+    display: grid;
+    grid-template-rows: 2fr 1fr 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.2;
+    nav {
+      color: #fff;
+      background-color: $orange;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
+        cursor: pointer;
+        list-style: none;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        letter-spacing: 2px;
+        &:not(:first-child) {
+          padding-top: 30px;
+          position: relative;
+        }
+        &:not(:first-child):before {
+          content: "◆";
+          position: absolute;
+          top: 8%;
+          left: 6px;
+          font-size: 0.5em;
+        }
+      }
+    }
+    p {
+      border: $borderWidth solid $orange;
+      color: $orange;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      cursor: pointer;
+      span {
+        display: inline-block;
+        writing-mode: sideways-lr;
+      }
+    }
+    .icon {
+      border-left: $borderWidth solid $orange;
+      border-right: $borderWidth solid $orange;
+      background-color: #fff;
+      color: $orange;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      font-size: 1.5em;
+      i {
+        cursor: pointer;
+      }
+    }
+  }
+  &:nth-of-type(3) {
+    nav {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    li {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: 2px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+      line-height: 1.4;
+      background-color: #46ab4f;
+      border-left: $borderWidth solid $orange;
+      border-right: $borderWidth solid $orange;
+      &:first-child {
+        border-bottom: $borderWidth solid $orange;
+      }
+    }
+  }
+}
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .img {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  h1 {
+    font-size: 8em;
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    font-weight: 900;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .chat {
+    color: #fff;
+    background-color: $orange;
+    position: absolute;
+    z-index: 5;
+    padding: 18px 15px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    right: -25px;
+    bottom: -25px;
+    cursor: pointer;
+  }
+}

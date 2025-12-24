@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="login-form"class="hidden">
+        <input required maxlength="15" type="text" placeholder="What is your name?"/>
+        <button>Log in</button>
+        <!-- ==<input type="submit" value="Log in"> -->
+    </form>  
+    <!-- input의 유효성을 검사하려면 form으로 감싸야함
+    유효하지 않은 값을 입력해 확인을 누르면 웹사이트를 재시작 해버리는 것. 
+    form이 submit 되고 있기 때문 == 이러면 페이지가 새로고침 되잖아!!! }4.1
+    -->
+    <h1 id="greeting" class="hidden"></h1>
+    <a href="https://nomadcoders.co">Go to courses</a>
+
+    <script src="app.js"></script>
+</body>
+</html>

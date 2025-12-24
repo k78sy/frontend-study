@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+      body {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      div {
+        padding: 0.5em;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .black {
+        background-color: #000;
+        color: #fff;
+      }
+      .black p {
+        font-size: 1.2em;
+        line-height: 1;
+      }
+      .black p span {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+      .black p i {
+        display: inline-block;
+        padding-left: 0.4em;
+      }
+      .purple {
+        background-color: #6c01ff;
+        grid-column: 2;
+      }
+      .red {
+        background-color: #ff1502;
+        grid-row: 2 / span 2;
+      }
+      .yellow {
+        background-color: #ffc904;
+        grid-column: 2;
+        grid-row: 3;
+      }
+      .list {
+        grid-column: 3;
+        grid-row: 1 / span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0.5em 0.8em;
+      }
+      .list ul {
+        font-size: 0.7em;
+        line-height: 1.25;
+      }
+      .list ul li:first-child {
+        font-size: 0.7em;
+        margin-bottom: 15px;
+      }
+      .list ul li.hightlight {
+        display: inline-block;
+        background-color: #6c01ff;
+        padding: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="black">
+      <p>CH<span>ANG</span>ES</p>
+      <p>CHANGES</p>
+      <p>CH<span>ANG</span>ES</p>
+      <p>CHANGES</p>
+      <p>JULY <i>4-5</i></p>
+    </div>
+    <div class="purple"></div>
+    <div class="red">
+      <span>about</span>
+      <span>contact</span>
+      <span>venues</span>
+      <span>faq</span>
+      <span>partners</span>
+    </div>
+    <div class="white"></div>
+    <div class="yellow">
+      <span>tickets</span>
+    </div>
+    <div class="list">
+      <ul>
+        <li>speakers</li>
+        <li>abby gee</li>
+        <li>alex yabsley</li>
+        <li>alex zaccaria</li>
+        <li>allegra caldwell</li>
+        <li>beatrice</li>
+        <li class="hightlight">bill wilson [us]</li>
+        <li>brigid dixon</li>
+        <li>carly james [us]</li>
+        <li>cherie hu [us]</li>
+        <li>chris mylrae</li>
+        <li>christie morgan</li>
+        <li>christopher</li>
+        <li>muratore [us]</li>
+        <li>danieelle levy [us]</li>
+        <li>dave "dizz1" norris</li>
+        <li>david benge [nz]</li>
+        <li>david ray</li>
+        <li>gareth smith [us]</li>
+        <li>jenn pelly [us]</li>
+        <li>joseph edward</li>
+        <li>keyes [us]</li>
+        <li>kat dopper</li>
+        <li>kate ducan</li>
+        <li>lorrae mckenna</li>
+        <li>marihyzka</li>
+        <li>cornelius</li>
+        <li>makrell casey [us]</li>
+      </ul>
+      <ul>
+        <li>artists</li>
+        <li>808s and greatest</li>
+        <li>hits</li>
+        <li>activies of daily</li>
+        <li>living</li>
+        <li>alexander giggs</li>
+        <li>alice skye</li>
+        <li>ausmuteants</li>
+        <li>baby</li>
+        <li>bench press</li>
+        <li>birdz</li>
+        <li>bones and jones</li>
+        <li>cable ties</li>
+        <li>chapel</li>
+        <li>civic</li>
+        <li>cleopold</li>
+        <li>darcy baylis</li>
+        <li>dark fair</li>
+        <li>dianas</li>
+        <li>diet</li>
+        <li>drmngnow</li>
+        <li>east brunswick all</li>
+        <li>girls choir</li>
+        <li>eilish gilligan</li>
+        <li>elizabeth</li>
+        <li>even klar</li>
+        <li>evelyn ida morris</li>
+        <li>fraser a. gorman</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css-layout-masterclass : Paris</title>
+    <style>
+      @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 2%;
+}
+.poster {
+  background-color: #f4f4f4;
+  width: 100%;
+  max-width: 550px;
+  height: 96%;
+  box-shadow: 5px 5px 20px #0003;
+  position: relative;
+  padding: 1.8% 1.4%;
+  color: #1e181a;
+}
+.poster .binder__clip {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -7%;
+  width: 20%;
+}
+.poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+.header .header__nation {
+  font-size: 5em;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+.header .header__num {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5em;
+  text-transform: uppercase;
+}
+.info .info__items {
+  display: flex;
+  gap: 5px;
+}
+.info .info__items .info__item {
+  padding-left: 2px;
+}
+.info .info__items .info__item p {
+  font-weight: 600;
+  padding: 2px;
+}
+.info .info__items .info__item p span {
+  font-weight: 300;
+  display: block;
+  margin-top: 1px;
+}
+.color {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: space-around;
+}
+.color .color__circle {
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-top: 4%;
+}
+.color .color__circle:nth-of-type(1),
+.color .color__circle:nth-of-type(2),
+.color .color__circle:nth-of-type(3) {
+  background-color: #bbe2f1;
+}
+.color .color__circle:nth-of-type(4),
+.color .color__circle:nth-of-type(5),
+.color .color__circle:nth-of-type(6) {
+  background-color: #626365;
+}
+.color .color__circle:nth-of-type(7),
+.color .color__circle:nth-of-type(8),
+.color .color__circle:nth-of-type(9) {
+  background-color: #03a363;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="poster">
+      <img src="/parisimg.png" class="binder__clip" alt="binder clip" />
+      <div class="top">
+        <header class="header">
+          <h1 class="header__nation">Paris</h1>
+          <h2 class="header__num">06.</h2>
+        </header>
+        <div class="info">
+          <div class="info__items">
+            <div class="info__item">
+              <p>
+                country
+                <span>france</span>
+              </p>
+              <p>
+                population
+                <span>2,249,275</span>
+              </p>
+              <p>
+                coordinate
+                <span>45°51'24"N</span>
+                <span>2°21'03"E</span>
+              </p>
+            </div>
+            <div class="info__item">
+              <p>
+                colours
+                <span>C23 M0 Y0 K0</span>
+                <span>C0 M0 Y0 K74</span>
+                <span>C100 M0 Y84 K0</span>
+              </p>
+            </div>
+          </div>
+          <p class="info__address">www.niokbaclaydesigns</p>
+        </div>
+      </div>
+      <div class="color">
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+        <div class="color__circle"></div>
+      </div>
+    </div>
+  </body>
+</html>
