@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       name: "vue...",
-      parentMsg: "아들아 공부 열심히 하그라",
+      parentMsg: "부모의 메세지",
     };
   },
   methods: {
@@ -28,7 +28,7 @@ export default {
       this.parentMsg = "자식으로부터 신호를 받았습니다!";
     },
     resetMsg() {
-      this.parentMsg = "아들아 공부 열심히 하그라";
+      this.parentMsg = "부모의 메세지";
     },
     receiveChildMsg(value) {
       this.parentMsg = value;
