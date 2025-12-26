@@ -12,14 +12,24 @@
     <script>
         fetch('https://picsum.photos/v2/list')
             .then(res => res.json())
-            .then(json => procItems(json))
+            .then(json => procItems(json))//json타입은 배열, 안에 {}는 객체
             .catch(err => console.log(err));
 
             const procItems = list =>{
-
+                const $container = document.querySelector("#container");
+                list.forEach(item =>{ //배열 안에 있는 객체의 주소값이 하나씩 들어옴
+                    const elem = makeItem(item);
+                    $container.append(elem);
+                })
             }
             const makeItem = data =>{
-
+                console.log('data:', data);
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <img src="${data.download_url}" alt="${data.author}">
+                    <div></div>
+                `;
+                return div;
             }
             
             /////////////////////// 객체와 문자열
