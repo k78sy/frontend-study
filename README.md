@@ -34,7 +34,7 @@
 
 | 카테고리      |   기술    | 링크                      | 비고          |
 | :------------ | :-------: | :------------------------ | :------------ |
-| **Basic**     | HTML/CSS  | [바로가기](/k78sy/frontend-study/js)   | 레이아웃 기초 |
+| **Basic**     | HTML/CSS  | [바로가기](k78sy/frontend-study/js)   | 레이아웃 기초 |
 | **Script**    | JS/jQuery | [바로가기](./javascript)  | DOM 조작법    |
 | **Framework** |  Vue.js   | [바로가기](./vue-project) | 컴포넌트 설계 |
 
