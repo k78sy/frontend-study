@@ -12,11 +12,8 @@
     <script>
         fetch('https://picsum.photos/v2/list')
             .then(res => res.json()) // json() 문자열인 json을 객체로 만든것. 역직렬화
-
             .then(json => procItems(json))//json타입은 배열, 안에 {}는 객체
-
             .catch(err => console.log(err));
-
 
             const procItems = list =>{
                 const $container = document.querySelector("#container");
@@ -29,8 +26,8 @@
                 console.log('data:', data);
                 const div = document.createElement('div');
                 div.innerHTML = `
-                    <img src="${data.download_url}" alt="${data.author}">
-                    <div></div>
+                    <img src="https://picsum.photos/id/${data.id}/${parseInt(data.width * 0.1)}/${parseInt(data.height * 0.1)}" alt="${data.author}" >
+                    <div>${data.author}</div>
                 `;
                 return div;
             }
