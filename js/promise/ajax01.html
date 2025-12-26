@@ -11,9 +11,12 @@
     <div id="container"></div>
     <script>
         fetch('https://picsum.photos/v2/list')
-            .then(res => res.json())
+            .then(res => res.json()) // json() 문자열인 json을 객체로 만든것. 역직렬화
+
             .then(json => procItems(json))//json타입은 배열, 안에 {}는 객체
+
             .catch(err => console.log(err));
+
 
             const procItems = list =>{
                 const $container = document.querySelector("#container");
