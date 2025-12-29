@@ -6,26 +6,37 @@ const router = createRouter({
     {
       path: '/component',
       component: () => import('@/views/component.vue'),
+      meta: { menuName: '컴포넌트', isMenu: true },
+    },
+    {
+      path: '/page94',
+      component: () => import('@/views/page94.vue'),
+      meta: { isMenu: true },
     },
     {
       path: '/page98',
       component: () => import('@/views/page98.vue'),
+      meta: { isMenu: true },
     },
     {
       path: '/page103',
       component: () => import('@/views/page103.vue'),
+      meta: { isMenu: true },
     },
     {
       path: '/page108',
       component: () => import('@/views/page108.vue'),
+      meta: { isMenu: true },
     },
     {
       path: '/page110',
       component: () => import('@/views/page110.vue'),
+      meta: { isMenu: true },
     },
     {
       path: '/mission01',
       component: () => import('@/views/mission01.vue'),
+      meta: { isMenu: true },
     },
   ],
 });
