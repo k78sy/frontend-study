@@ -1,14 +1,14 @@
 <script setup>
-    import Tire from "./Tire.vue"
+        import Tire from "@/components/Tire.vue"
 </script>
 <template>
-    <div class="front-wheel">
-        <span>FRONT WHEEL</span>
-        <tire color="BLUE"/>
+    <div class="rear-wheel">
+        <span>REAR WHEEL</span>
+        <Tire color="YELLOW"/>
     </div>
 </template>
 <style scoped>
-    .front-wheel{
+    .rear-wheel{
         border: 1px solid #000;
         border-radius: 50%;
         display: flex;
