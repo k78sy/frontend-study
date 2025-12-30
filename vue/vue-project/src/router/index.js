@@ -4,7 +4,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: globalState.map((item) => {
     const filePath = `../views${item.startsWith('mission') ? '/mission' : ''}/${item}.vue`;
-    console.log(filePath);
     return {
       path: `/${item}`,
       component: () => import(filePath),
