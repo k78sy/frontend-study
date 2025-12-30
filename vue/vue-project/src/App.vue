@@ -1,24 +1,14 @@
 <script setup>
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-// 라우터에 등록된 전체 리스트를 가져옵니다.
-const routes = router.getRoutes().filter(route => route.meta.isMenu);
+import { globalState } from '@/globalState';
 </script>
 
 <template>
   <div>
     <nav>
-      <router-link 
-        v-for="route in routes" 
-        :key="route.path" 
-        :to="route.path"
-      >
-      {{ route.meta.menuName || route.path.replace('/', '') }} 
-      </router-link>
+      <router-link v-for="item in globalState" :to="`/${item}`" :key="item">{{ item }}</router-link>
     </nav>
     <main>
-      <router-view></router-view>
+      <router-view />
     </main>
   </div>
 </template>
@@ -28,5 +18,5 @@ const routes = router.getRoutes().filter(route => route.meta.isMenu);
   background: hsla(160, 100%, 37%, 1);
   color: #fff;
 }
-nav > a{display: inline-block;}
+nav > a { display: inline-block; }
 </style>
