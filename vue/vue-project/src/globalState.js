@@ -1,5 +1,6 @@
 export const globalState = [
   'component',
+  'page94',
   'page98',
   'page103',
   'page108',

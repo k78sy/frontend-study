@@ -14,9 +14,5 @@ import { globalState } from '@/globalState';
 </template>
 
 <style scoped>
-.router-link-active{
-  background: hsla(160, 100%, 37%, 1);
-  color: #fff;
-}
 nav > a { display: inline-block; }
 </style>
