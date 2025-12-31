@@ -10,5 +10,6 @@ export const globalState = [
   'page123',
   'page125',
   'page126',
+  'page129',
   'mission01',
 ];

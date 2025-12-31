@@ -11,8 +11,8 @@ const state = reactive({
 // 적혀있으면 (`${state.form.id}님 환영합니다!`)
 
 const login = () => {
-    // 예외 처리
-    // 취향: 부정적인걸 먼저 처리하는 걸 선호..
+    // 예외 처리 
+    // 강사님 취향: 부정적인걸 먼저 처리하는 걸 선호..
 
         // if (state.form.id.length === 0 || !state.form.pw) {
         //     alert('아이디, 패스워드를 작성해주세요');

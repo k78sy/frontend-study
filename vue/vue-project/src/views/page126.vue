@@ -3,26 +3,45 @@ import { onMounted, reactive } from 'vue'; // {}: 함수/변수/상수 불러오
 import axios from 'axios'; // {}없 : 객체 주소값 리턴할 때
 
 const state = reactive({
-    imgList:[]
-})
+  imgList: [],
+});
 
 onMounted(() => {
-    console.log('onMounted');
-    axios.get('https://picsum.photos/v2/list')
-        // .then( res => console.log(res.data))
-        .then(res => state.imgList = res.data)
-})
+  console.log('onMounted');
+  axios
+    .get('https://picsum.photos/v2/list')
+    // .then( res => console.log(res.data))
+    .then((res) => {
+      console.log(res);
+      state.imgList = res.data; //res에 담긴 data 배열 가져오기
+      console.log(res.data);
+    });
+});
+const changeSize = img => {
+    const width = parseInt(img.width * 0.1);
+    const height = parseInt(img.height * 0.1);
+    return `https://picsum.photos/id/${img.id}/${width}/${height}`;
+}
 </script>
 
 <template>
-<h3>page126.vue</h3>
-    <img v-for="img in state.imgList" 
+  <h3>page126.vue</h3>
+  <!-- <img
+        v-for="img in state.imgList" 
         :key="img.id"
         :src="img.download_url"
         :width="img.width *0.05"
-    />
+        :alt="img.author"
+    /> -->
+  <div v-for="img in state.imgList" :key="img.id" :id="'id-' + img.id">
+    <a :href="img.url" target="_blank">
+      <img
+        :src="changeSize(img)"
+        :alt="img.author"
+      />
+      <div>{{ img.author }}</div>
+    </a>
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
