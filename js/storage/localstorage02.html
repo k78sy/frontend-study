@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage02.html</title>
+</head>
+
+<body>
+    <script>
+const arr = [10, 20, 30];
+//로컬스토리지에 배열을 저장하고 싶다.
+//Local storage엔 프라머티브/불린 타입만 저장할 수 있고 배열은 저장못함
+console.log('arr:', arr);
+console.log('typeof:', typeof arr);
+
+localStorage.setItem('arr',arr);
+
+const result = localStorage.getItem('arr');
+console.log('arr을 local storage에 넣은 결과값:', result);
+console.log('local storage에 들어간 arr typeof:', typeof result);
+
+// stringify() 객체를 JSON형태의 문자열로 변환(직렬화)할 때 사용
+const json = JSON.stringify(arr);
+console.log('arr json(배열을 문자열로 변환):', json);
+    // 결과: "[10,20,30]" 대괄호([ ])와 쉼표(,)까지 모두 포함된 글자 덩어리
+console.log('typeof arr json(직렬화된 배열이었던 것:지금은 문자열):', typeof json);
+    // 결과: "string"
+localStorage.setItem('arr2', json);
+
+const result2 = localStorage.getItem('arr2');
+// parse() 역직렬화 때 사용. JSON형태의 문자열을 객체로 변환
+const arr2 = JSON.parse(result2);
+console.log('문자열이었던 걸 배열로 만든 arr2:', arr2);
+//결과: [10, 20, 30]
+console.log('typeof arr2(역직렬화했으니 배열=object로 표시):', typeof arr2)
+    // 결과: "object"
+    </script>
+</body>
+
+</html>
