@@ -9,10 +9,13 @@ const state = reactive({
 
 onMounted(() => state.memos = storageService.getItems());
 const remove = id => {
-    if(confirm('삭제하시겠습니까?')){
+    if(!confirm('삭제하시겠습니까?')){
         return
     }
-    
+    console.log('삭제실행')
+
+    storageService.delItem(id);
+    state.memos = storageService.getItem();
 }
 </script>
 

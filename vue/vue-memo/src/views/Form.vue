@@ -1,10 +1,11 @@
 <script setup>
-import { reactive } from 'vue';
+import { reactive, onMounted } from 'vue';
 import storageService from '@/services/StorageService';
 //Home에서 불러오는 것과 같은 객체 주소값이 넘어옴
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();//라우터 객체 주소값 얻기 // 이동할때는 useRouter를 써야함
+const route = useRoute(); //라우트 객체 주소값 얻기 (PathVariable 값 가져오기)
 const state = reactive({
     memo: {
         title: '',
@@ -19,6 +20,14 @@ const submit = () => {
         path:'/'
     })
 }
+onMounted(() => {
+    if (route.params.id) {// id: router/index.js에서 id값을 사용하니
+        const id = Number(route.params.id); //받아온 문자열을 숫자로 바꿈
+        //route.params.XX route 쓰는 약속
+        state.memo = storageService.getItem(id);
+    }
+})
+
 </script>
 
 <template>
@@ -29,7 +38,7 @@ const submit = () => {
     </div>
     <div class="mb-3">
         <label for="content" class="form-label">내용</label>
-        <textarea id="content" v-model="state.memo.content"></textarea>
+        <textarea id="content" v-model="state.memo.content" class="form-control p-3"></textarea>
     </div>
     <button class="btn btn-primary w-100 py-3">저장</button>
 </form>
