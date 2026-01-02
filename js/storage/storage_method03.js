@@ -5,12 +5,13 @@ const arr = [
 ];
 const obj = {};
 
-for (let i = 0; i < arr.length; i++) {
-    // const key = arr[i].id;
-    // const value = arr[i];
-    // obj[key] = value;
-    obj[arr[i].id] = arr[i];
-}
+// for (let i = 0; i < arr.length; i++) {
+//     const key = arr[i].id;
+//     const value = arr[i];
+//     // obj[key] = value;
+//     obj[arr[i].id] = arr[i];
+// }
+arr.forEach(item => { obj[item.id] = item });
 
 // const obj = {
 //     abc: {id:'abc', name:'홍길동1'},
