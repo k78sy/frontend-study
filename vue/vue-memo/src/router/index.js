@@ -8,8 +8,12 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home,
+    },{
+      path: '/memos/add',
+      // name: 'memoAdd',
+      component: () => import('@/views/Form.vue'),
     },
-  ],
+  ]
 });
 
 export default router
